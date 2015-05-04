@@ -1,3 +1,114 @@
-<h2 id="title">Welcome to Ember.js</h2>
+<!-- Fixed navbar -->
+<nav class="navbar navbar-default navbar-fixed-top">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <img class='pull-left' style="max-width:100px; max-height: 40px; margin-top: 5px; margin-right: 5px;" src="img/core.png">
+      <a class="navbar-brand" href="#">IP Core Engineering</a>
+    </div>
+    <div id="navbar" class="navbar-collapse collapse">
+      <ul class="nav navbar-nav">
+        <li class="dropdown">
+        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Standards <span class="caret"></span></a>
+        <ul class="dropdown-menu" role="menu">
+          <li class="dropdown-header">Network</li>
+          <li><a href="#">BB2</a></li>
+          <li><a href="#">BB4</a></li>
+          <li class="divider"></li>
+          <li class="dropdown-header">Alcatel</li>
+          <li><a href="#">7950</a></li>
+          <li><a href="#">7750</a></li>
+          <li class="divider"></li>
+          <li class="dropdown-header">Cisco</li>
+          <li><a href="#">6509</a></li>
+          <li class="divider"></li>
+          <li class="dropdown-header">Brocade</li>
+          <li><a href="#">MX32</a></li>
+          <li class="divider"></li>
+          <li class="dropdown-header">Juniper</li>
+          <li><a href="#">MX960</a></li>
+          <li><a href="#">EX4300</a></li>
+        </ul>
+        </li>
+
+        <li class="dropdown">
+        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">MOPs <span class="caret"></span></a>
+        <ul class="dropdown-menu" role="menu">
+          <li class="dropdown-header">By Vendor</li>
+          <li><a href="#">Alcatel</a></li>
+          <li><a href="#">Cisco</a></li>
+          <li><a href="#">Juniper</a></li>
+          <li><a href="#">Brocade</a></li>
+          <li class="divider"></li>
+          <li class="dropdown-header">By Network</li>
+          <li><a href="#">BB2</a></li>
+          <li><a href="#">BB4</a></li>
+        </ul>
+        </li>
+
+        <li class="dropdown">
+        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Docs <span class="caret"></span></a>
+        <ul class="dropdown-menu" role="menu">
+          <li class="dropdown-header">On-boarding</li>
+          <li><a href="#">Engineer Checklist</a></li>
+          <li class="divider"></li>
+          <li class="dropdown-header">Network Testing</li>
+          <li><a href="#">Basic Operation</a></li>
+          <li><a href="#">Protocols</a></li>
+          <li><a href="#">QoS</a></li>
+          <li><a href="#">Vendor Interop</a></li>
+          <li class="divider"></li>
+          <li class="dropdown-header">Security</li>
+          <li><a href="#">Vendor Notification & Response</a></li>
+          <li><a href="#">Vendor Bulletins</a></li>
+          <li class="divider"></li>
+          <li class="dropdown-header">Programming</li>
+          <li><a href="#">Python Basics</a></li>
+          <li><a href="#">Python Standards</a></li>
+          <li><a href="#">Python Network Modules</a></li>
+          <li class="divider"></li>
+          <li class="dropdown-header">Tail-f</li>
+          <li><a href="#">Basics</a></li>
+          <li><a href="#">Yang</a></li>
+          <li><a href="#">Netconf</a></li>
+        </ul>
+        </li>
+
+        <li class="dropdown">
+        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Tools <span class="caret"></span></a>
+        <ul class="dropdown-menu" role="menu">
+          <li class="dropdown-header">Lab</li>
+          <li><a href="rdp://<something>">iTest</a></li>
+          <li class="divider"></li>
+          <li class="dropdown-header">Virtual Devices</li>
+          <li><a href="ssh2://admin@10.248.49.105">ALU-SIM1</a></li>
+          <li class="divider"></li>
+          <li class="dropdown-header">Configuration</li>
+          <li><a href="#">Confgen</a></li>
+          <li><a href="#">Brocade to ALU Converter</a></li>
+          <li class="divider"></li>
+          <li class="dropdown-header">Monitoring</li>
+          <li><a href="#">MPLS VPN Monitor</a></li>
+          <li class="divider"></li>
+          <li class="dropdown-header">Bill of Materials</li>
+          <li><a href="http://bom/" target="_blank">BOM Builder Tool</a></li>
+          <li class="divider"></li>
+          <li class="dropdown-header">Experimental</li>
+          <li><a href="#">Network Map</a></li>
+        </ul>
+        </li>
+
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="mailto:dl-coreipengineering@level3.com"><span class="glyphicon glyphicon-envelope"></span> Request</a></li>
+      </ul>
+    </div><!--/.nav-collapse -->
+  </div>
+</nav>
 
 {{outlet}}

@@ -1,0 +1,13 @@
+<div class="containter-fluid">
+  {{#each device in model}}
+  <div class="row">
+    <div class="col-sm-12">
+      <h1>{{device.name}}</h1>
+    </div>
+    <div class="col-sm-12 col-lg-4">
+      <h5>{{vpn.name}} - VPNs</h5>
+      {{vpn-graph data=device.vpns}}
+    </div>
+  </div>
+  {{/each}}
+</div>
