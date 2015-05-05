@@ -5,6 +5,10 @@ div, span, p, td {
   font-family: Arial, sans-serif;
 }
 
+.rickshaw_graph {
+  position: absolute;
+}
+
 /* graph */
 .rickshaw_graph svg {
   position: relative;
