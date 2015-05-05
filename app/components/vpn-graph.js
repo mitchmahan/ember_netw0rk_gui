@@ -19,7 +19,7 @@ export default Ember.Component.extend({
 
     var graph = new Rickshaw.Graph({
       element: document.querySelector('#' + this.elementId), 
-      width: 960, 
+      width: 800, 
       height: 500, 
       renderer: 'line',
       series: this.get('graphData')

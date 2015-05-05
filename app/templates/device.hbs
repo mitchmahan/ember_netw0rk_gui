@@ -5,20 +5,26 @@
   </ul>
 </div>
 
-<div class="containter">
+<div class="container-fluid">
   {{#each device in model}}
   <div class="row">
-
     <div class="col-sm-4">
+      <h4>{{device.name}} VPN Graph</h4>
       <div class="legend_container">
         <div class="graph_legend" id="{{device.name}}-legend"></div>
       </div>
     </div>
-
     <div class="col-sm-8">
-      <br>
-      <h4>{{device.name}} VPN Graph</h4>
-      {{vpn-graph device=device.name data=device.vpns}}
+      <div class="graph_container">
+        {{vpn-graph device=device.name data=device.vpns}}
+      </div>
+    </div>
+  </div>
+
+  <div class='row'>
+    <div class="col-sm-5">
+      <h4>{{device.name}} CPU Graph</h4>
+      {{cpu-graph device=device data=device.cpus}}
     </div>
   </div>
 
