@@ -1,13 +1,26 @@
-<div class="containter-fluid">
+<div class="container nav-2">
+  <ul class="nav nav-pills">
+    <li class="active"><a href="/device/">Devices <span class="badge">{{model.length}}</span></a></li>
+    <li><a href="/device/">Alerts <span class="label label-danger">{{model.length}}</span></a></li>
+  </ul>
+</div>
+
+<div class="containter">
   {{#each device in model}}
   <div class="row">
-    <div class="col-sm-12">
-      <h1>{{device.name}}</h1>
+
+    <div class="col-sm-4">
+      <div class="legend_container">
+        <div class="graph_legend" id="{{device.name}}-legend"></div>
+      </div>
     </div>
-    <div class="col-sm-12 col-lg-4">
-      <h5>{{vpn.name}} - VPNs</h5>
-      {{vpn-graph data=device.vpns}}
+
+    <div class="col-sm-8">
+      <br>
+      <h4>{{device.name}} VPN Graph</h4>
+      {{vpn-graph device=device.name data=device.vpns}}
     </div>
   </div>
+
   {{/each}}
 </div>

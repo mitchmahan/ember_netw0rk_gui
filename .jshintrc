@@ -1,5 +1,7 @@
 {
   "predef": [
+    "Rickshaw",
+    "d3",
     "document",
     "window",
     "-Promise"
