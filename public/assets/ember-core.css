@@ -6,17 +6,22 @@ div, span, p, td {
 }
 
 .rickshaw_graph {
-  position: absolute;
+  display: inline-block;
+  position: relative;
+  padding-bottom: 300px;
+  vertical-align: middle;
 }
 
 /* graph */
 .rickshaw_graph svg {
-  position: relative;
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
   overflow: hidden;
 }
 
 /* ticks */
-
 .rickshaw_graph .x_tick {
   position: absolute;
   top: 0;
@@ -36,7 +41,6 @@ div, span, p, td {
 }
 
 /* annotations */
-
 .rickshaw_annotation_timeline {
   height: 1px;
   border-top: 1px solid #e0e0e0;
@@ -291,6 +295,7 @@ div, span, p, td {
 .graph_legend {
   max-width: 100%;
   overflow: auto;
+  overflow-x: hidden;
   font-family: Arial;
   font-size: 12px;
   color: white;
@@ -343,7 +348,7 @@ div, span, p, td {
   opacity: 0.4;
 }
 .graph_legend ul {
-  height: 400px;
+  height: 300px;
   list-style-type: none;
   margin: 0;
   padding: 0;

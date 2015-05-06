@@ -15,49 +15,50 @@ export default Ember.Component.extend({
     return xy_data;
   }.property(),
 
-  didInsertElement: function() {
+  actions: {
+    render: function() {
+      var graph = new Rickshaw.Graph({
+        element: document.querySelector('#' + this.elementId), 
+        width: 550, 
+        height: 300, 
+        renderer: 'line',
+        series: this.get('graphData')
+      });
 
-    var graph = new Rickshaw.Graph({
-      element: document.querySelector('#' + this.elementId), 
-      width: 800, 
-      height: 500, 
-      renderer: 'line',
-      series: this.get('graphData')
-    });
+      graph.render();
 
-    graph.render();
-
-    var hoverDetail = new Rickshaw.Graph.HoverDetail( {
-          graph: graph
-    } );
+      var hoverDetail = new Rickshaw.Graph.HoverDetail( {
+        graph: graph
+      } );
 
 
-    var xAxis = new Rickshaw.Graph.Axis.Time({
+      var xAxis = new Rickshaw.Graph.Axis.Time({
         graph: graph,
         ticksTreatment: 'glow'
-    });
+      });
 
-    xAxis.render();
+      xAxis.render();
 
-    var yAxis = new Rickshaw.Graph.Axis.Y({
+      var yAxis = new Rickshaw.Graph.Axis.Y({
         graph: graph,
         tickFormat: Rickshaw.Fixtures.Number.formatKMBT,
         ticksFormat: 'glow'
-    });
+      });
 
-    yAxis.render();
+      yAxis.render();
 
-    var legend = new Rickshaw.Graph.Legend( {
+      var legend = new Rickshaw.Graph.Legend( {
         graph: graph,
-        element: document.getElementById(this.get('device') + '-legend')
+        element: document.getElementById(this.get('device.name') + '-vpn-legend')
 
-    } );
+      } );
 
-    var shelving = new Rickshaw.Graph.Behavior.Series.Toggle( {
+      var shelving = new Rickshaw.Graph.Behavior.Series.Toggle( {
         graph: graph,
-          legend: legend
-    } );
+        legend: legend
+      } );
 
+    }
   }
 
 });

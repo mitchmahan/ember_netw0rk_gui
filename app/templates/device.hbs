@@ -8,25 +8,27 @@
 <div class="container-fluid">
   {{#each device in model}}
   <div class="row">
-    <div class="col-sm-4">
-      <h4>{{device.name}} VPN Graph</h4>
+    <div class="col-lg-12">
+      {{device.name}} - Detailed Analytics
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-lg-4">
       <div class="legend_container">
-        <div class="graph_legend" id="{{device.name}}-legend"></div>
+        <div class="graph_legend" id="{{device.name}}-vpn-legend"></div>
       </div>
     </div>
-    <div class="col-sm-8">
+    <div class="col-lg-4">
+      <div id="{{device.name}}-yAxis"></div>
       <div class="graph_container">
-        {{vpn-graph device=device.name data=device.vpns}}
+        {{vpn-graph device=device data=vpnData}}
       </div>
     </div>
   </div>
-
-  <div class='row'>
-    <div class="col-sm-5">
-      <h4>{{device.name}} CPU Graph</h4>
-      {{cpu-graph device=device data=device.cpus}}
+  <div class="col-lg-4">
+    <div class="graph_container">
+      {{cpu-graph device=device data=cpuData}}
     </div>
   </div>
-
   {{/each}}
 </div>

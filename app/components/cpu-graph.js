@@ -9,41 +9,43 @@ export default Ember.Component.extend({
     return cpu_xy;
   }.property(),
 
-  didInsertElement: function() {
+  actions: {
+    render: function() {
 
-    var graph = new Rickshaw.Graph({
-      element: document.querySelector('#' + this.elementId), 
-      width: 960, 
-      height: 500, 
-      renderer: 'line',
-      series: [ {
-        name: 'cpu',
-        color: '#'+Math.floor(Math.random()*16777215).toString(16),
-        data: this.get('graphData')
-      } ]
-    });
+      var graph = new Rickshaw.Graph({
+        element: document.querySelector('#' + this.elementId), 
+        width: 550, 
+        height: 300, 
+        renderer: 'line',
+        series: [ {
+          name: 'cpu',
+          color: "#830fa6",
+          data: this.get('graphData')
+        } ]
+      });
 
-    graph.render();
+      graph.render();
 
-    var hoverDetail = new Rickshaw.Graph.HoverDetail( {
-      graph: graph
-    } );
+      var hoverDetail = new Rickshaw.Graph.HoverDetail( {
+        graph: graph
+      } );
 
 
-    var xAxis = new Rickshaw.Graph.Axis.Time({
-      graph: graph,
-      ticksTreatment: 'glow'
-    });
+      var xAxis = new Rickshaw.Graph.Axis.Time({
+        graph: graph,
+        ticksTreatment: 'glow'
+      });
 
-    xAxis.render();
+      xAxis.render();
 
-    var yAxis = new Rickshaw.Graph.Axis.Y({
-      graph: graph,
-      tickFormat: Rickshaw.Fixtures.Number.formatKMBT,
-      ticksFormat: 'glow'
-    });
+      var yAxis = new Rickshaw.Graph.Axis.Y({
+        graph: graph,
+        tickFormat: Rickshaw.Fixtures.Number.formatKMBT,
+        ticksFormat: 'glow'
+      });
 
-    yAxis.render();
+      yAxis.render();
+    }
 
   }
 
