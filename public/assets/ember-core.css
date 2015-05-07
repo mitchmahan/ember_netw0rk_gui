@@ -8,7 +8,7 @@ div, span, p, td {
 .rickshaw_graph {
   display: inline-block;
   position: relative;
-  padding-bottom: 300px;
+  padding-bottom: 700px;
   vertical-align: middle;
 }
 
@@ -348,7 +348,7 @@ div, span, p, td {
   opacity: 0.4;
 }
 .graph_legend ul {
-  height: 300px;
+  height: 700px;
   list-style-type: none;
   margin: 0;
   padding: 0;
@@ -389,10 +389,6 @@ div, span, p, td {
   padding-bottom:10px;
 }
 
-.rickshaw_graph .y_axis,
-.rickshaw_graph  .x_axis_d3 {
-  fill: none;
-}
 .rickshaw_graph .y_ticks .tick line,
 .rickshaw_graph .x_ticks_d3 .tick {
   stroke: rgba(0, 0, 0, 0.16);

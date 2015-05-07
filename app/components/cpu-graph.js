@@ -11,16 +11,16 @@ export default Ember.Component.extend({
 
   actions: {
     render: function() {
-
       var graph = new Rickshaw.Graph({
         element: document.querySelector('#' + this.elementId), 
+        max: 100,
         width: 550, 
         height: 300, 
-        renderer: 'line',
+        renderer: 'area',
         series: [ {
           name: 'cpu',
           color: "#830fa6",
-          data: this.get('graphData')
+          data: this.get('graphData'),
         } ]
       });
 
